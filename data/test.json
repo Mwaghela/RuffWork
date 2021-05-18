@@ -1,1 +1,8 @@
-{"data":"test"}
+{
+    "data": {
+        "component" : [
+            {"title" : "project1", "content" : "Adding date variable"},
+            {"title" : "project2", "content" : "Adding int variable"}
+        ]
+    }
+}
