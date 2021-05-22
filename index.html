@@ -13,27 +13,27 @@
 		<div class="header shadow-sm mb-3">
 			<span class="align-middle font24"><center>RuffWork</center></span>
 		</div>
-		<div class="position-absolute top-10 end-0 w-p105">
+		<div class="position-absolute top-10 start-0 w-p105">
 			<input type="file" id="uploadFile" style="display: none;" onchange="readFileContent(event)"/>
 			<button type="button" class="btn btn-primary btn-sm borderRadius0 w-100 text-start" onclick="document.getElementById('uploadFile').click();">
                 <i class="fa fa-cloud-upload" aria-hidden="true"></i>
 				</svg> Upload
 			</button>
 		</div>
-		<div class="position-absolute top-17 end-0 w-p105">
+		<div class="position-absolute top-17 start-0 w-p105">
 			<button type="button" class="btn btn-primary btn-sm borderRadius0 w-100 text-start" onclick="showModal()">
 				<i class="fa fa-plus-circle" aria-hidden="true"></i>
 				</svg>
 				Add Task
 			</button>
 		</div>
-		<div class="position-absolute top-24 end-0 w-p105">
+		<div class="position-absolute top-24 start-0 w-p105">
 			<button type="button" class="btn btn-primary btn-sm borderRadius0 w-100 text-start" onclick="downloadRuffWork()">
 				<i class="fa fa-cloud-download" aria-hidden="true"></i>
 				Download
 			</button>
 		</div>
-		<div class="position-absolute top-31 end-0 w-p105">
+		<div class="position-absolute top-31 start-0 w-p105">
 			<div class="input-group input-group-sm col-md-3">
 				<input type="text" class="form-control p-0 pl-5px" oninput="searchData(this.value)" placeholder="Search" aria-label="Search" aria-describedby="basic-addonsearch">
 				<div class="input-group-append">
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 		
-		<div class="col-xl-12 col-lg-12 col-md-12 scrollbar-near-moon thin w-90" id="mainPage">
+		<div class="col-xl-12 col-lg-12 col-md-12 scrollbar-near-moon w-85" style="margin-left:15%;" id="mainPage">
             <div class="container m-0"><div class="row" id="mainRow"></div></div>
         </div>
 
