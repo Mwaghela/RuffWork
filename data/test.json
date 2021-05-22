@@ -1,8 +1,9 @@
 {
     "data": {
         "component" : [
-            {"id":"TSK1234", "seqId":0, "title" : "project1", "content" : "Adding date variable"},
-            {"id":"TAS5678", "seqId":1, "title" : "project2", "content" : "Adding int variable"}
-        ]
+            {"id":"TSK1234", "seqId":0, "title" : "project1", "content" : "Adding date variable", "dueDate":"", "status":""},
+            {"id":"TAS5678", "seqId":1, "title" : "project2", "content" : "Adding int variable", "dueDate":"", "status":""},
+			{"id":"TAS9012", "seqId":2, "title" : "project3", "content" : "Adding decimal variable", "dueDate":"", "status":"done"}
+		]
     }
 }

@@ -6,8 +6,8 @@ var editFlag = false;
 var editSeqId = 0;
 
 function createDynamicCard(component){
-    var dynamicContent = "<div class='col-xl-3 col-lg-3 col-md-3'><div class='card bg-light mb-3' style='max-width: 18rem;'>";
-    dynamicContent += "<div class='card-header'>"
+    var dynamicContent = "<div class='col-xl-3 col-lg-3 col-md-3'><div class='card bg-light mb-3 shadow' style='max-width: 18rem;'>";
+    dynamicContent += "<div class='card-header shadow-sm'>"
     dynamicContent += "<div class='float-end' onclick=\"deleteRuffWork(\'"+component.seqId+"\')\"><i class='fa fa-trash text-danger' style='font-size:18px;' aria-hidden='true'></i></div>";
     dynamicContent += "<div class='float-end margin-right2px' onclick=\"editRuffWork(\'"+component.seqId+"\')\"><i class='fa fa-pencil text-secondary' style='margin-right:5px;' aria-hidden='true'></i></div>";
     dynamicContent += "<blockquote class='blockquote text-left'><p class='mb-0'>"+component.title+"</p>";
@@ -147,4 +147,8 @@ function flushData() {
     editComponent = {};
     editFlag = false;
     editSeqId = 0;   
+}
+
+function loadTour() {
+    console.log("Loading RuffWork Tour...");
 }
