@@ -11,7 +11,19 @@ function createDynamicCard(component){
     dynamicContent += "<div class='float-end' onclick=\"deleteRuffWork(\'"+component.seqId+"\')\"><i class='fa fa-trash text-danger' style='font-size:18px;' aria-hidden='true'></i></div>";
     dynamicContent += "<div class='float-end margin-right2px' onclick=\"editRuffWork(\'"+component.seqId+"\')\"><i class='fa fa-pencil text-secondary' style='margin-right:5px;' aria-hidden='true'></i></div>";
     dynamicContent += "<blockquote class='blockquote text-left'><p class='mb-0'>"+component.title+"</p>";
-    dynamicContent += "<footer class='blockquote-footer text-end' style='font-size:10px;margin-top:5px;'><small>"+component.id+"</small></footer></blockquote>"
+    dynamicContent += "<footer class='blockquote-footer text-end' style='font-size:10px;margin-top:5px;'><!--<small>"+component.id+"</small>--!>";
+    if(component.status == "" || component.status == "todo") {
+        dynamicContent += "<span class='badge badge-light'>To Do</span>";
+    } else if(component.status == "inprogress") {
+        dynamicContent += "<span class='badge badge-secondary'>In Progress</span>";
+    } else if(component.status == "review") {
+        dynamicContent += "<span class='badge badge-info'>In Review</span>";
+    } else if(component.status == "done") {
+        dynamicContent += "<span class='badge badge-success'>Done</span>";
+    } else if(component.status == "block") {
+        dynamicContent += "<span class='badge badge-success'>Blocked</span>";
+    } 
+    dynamicContent += "</footer></blockquote>"
     dynamicContent += "</div>";
     dynamicContent += "<div class='card-body'>";
     //dynamicContent += "<h5 class='card-title'>"+content+"</h5>";
@@ -69,6 +81,7 @@ function saveRuffWork(){
         component.seqId = len;
         component.title = addTitle;
         component.content = addDetails;
+        component.status = "todo";
         jsonData.data.component[len] = component;
         console.log(jsonData);
         refreshContent(jsonData);
